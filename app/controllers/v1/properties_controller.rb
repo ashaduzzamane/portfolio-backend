@@ -19,6 +19,15 @@ class V1::PropertiesController < ApplicationController
         end
     end
 
+    def update
+        property = Property.find(params[:id]);
+        if property.update_attributes(property_params)
+            render json: {status: 'SUCCESS', message: 'Updated Property', data:property}, status: :ok
+        else
+            render json: {status: 'ERROR', message: 'Property NOT Updated', data:property.errors}, status: :unprocessable_entity
+        end
+    end
+
     def destroy
         property = Property.find(params[:id]);
         property.destroy
