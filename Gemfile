@@ -7,7 +7,7 @@ ruby '2.7.0'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # gem 'sqlite3', '~> 1.4'
 gem 'mysql2'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 
 
 # Reduces boot times through caching; required in config/boot.rb
